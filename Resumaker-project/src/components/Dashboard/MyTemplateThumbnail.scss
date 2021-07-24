@@ -1,0 +1,125 @@
+.myTemplateThumbnail-container {
+  margin: 1rem auto 2rem;
+
+  @include tabletP {
+    width: $template-thumbnail-width-tabletP;
+  }
+
+  @include laptop {
+    width: $template-thumbnail-width-laptop;
+  }
+
+  .myTemplateThumbnail-name {
+    margin: 0.5rem auto;
+    display: block;
+    text-align: center;
+
+    @include tabletP {
+      margin: 1rem auto;
+      font-size: 1rem;
+    }
+  }
+
+  .myTemplateThumbnail-row {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    .myTemplateThumbnail-row-button {
+      width: 100px;
+      text-align: center;
+
+      @include mobileS {
+        width: 125px;
+      }
+
+      @include mobileL {
+        width: 150px;
+      }
+
+      @include tabletP {
+        width: 135px;
+      }
+
+      @include laptop {
+        width: 120px;
+      }
+
+      @include desktop {
+        width: 135px;
+      }
+    }
+  }
+
+  .myTemplateThumbnail {
+    position: relative;
+
+    .myTemplateThumbnail-toast-container {
+      width: 250px;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .myTemplateThumbnail-toast {
+      background-color: $theme;
+      color: $white;
+      padding: 8px;
+      border-radius: 12px;
+
+      .Toastify__close-button--default {
+        color: $white;
+        opacity: 0.5;
+      }
+    }
+
+    .myTemplateThumbnail-toast-body {
+      padding: 6px 0 6px 6px;
+
+      .myTemplateThumbnail-toast-content {
+        text-align: center;
+      }
+    }
+
+    .myTemplateThumbnail-image {
+      width: 100%;
+      height: 360px;
+    }
+
+    .myTemplateThumbnail-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.9;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .myTemplateThumbnail-hover-button {
+        width: 150px;
+        margin: 0.5rem auto;
+        text-align: center;
+
+        @include mobileS {
+          width: 200px;
+        }
+
+        @include mobileL {
+          width: 225px;
+        }
+      }
+    }
+  }
+
+  > :first-child:hover {
+    .myTemplateThumbnail-hover {
+      visibility: visible;
+    }
+  }
+}

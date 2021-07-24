@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+//border-top: 3px solid $theme;
+.theme {
+	border-top: 3px solid $theme;
+}
+.theme1 {
+	border-top: 3px solid #00d4ff;
+}
+.theme2 {
+	border-top: 3px solid #465abf;
+}
+.theme3 {
+	border-top: 3px solid #4955bc;
+}
+.theme4 {
+	border-top: 3px solid #222668;
+}
+.theme5 {
+	border-top: 3px solid #020024;
+}
+.hrw-container {
+	@include flex-config(flex, column);
+	margin: 0 auto;
+	@include tabletP {
+		padding-bottom: 3rem;
+	}
+	.hrw-header {
+		text-align: center;
+		padding: 2rem;
+	}
+	.hrw-description {
+		text-align: center;
+		@include tabletP {
+			text-align: left;
+			width: 50%;
+			margin: 0 auto;
+			padding: 2rem 0rem 1rem 0rem;
+		}
+	}
+	.hrw-card-contents {
+		@include tabletP {
+			display: flex;
+			margin-bottom: 4rem;
+		}
+		.hrw-card {
+			padding: 1rem;
+			margin: 1rem 0rem;
+			border-radius: 5px;
+			box-shadow: 0px 30px 40px -30px #414249;
+			@include tabletP {
+				margin: 1rem;
+				width: 50rem;
+				padding: 2rem;
+			}
+			.hrw-card-image-container {
+				display: block;
+				margin: 0 auto;
+			}
+			.hrw-card-title {
+				color: hsl(234, 12%, 34%);
+				font-weight: 600;
+			}
+			.hrw-card-description {
+				color: #a3a5ae;
+				line-height: 2;
+			}
+		}
+	}
+	.hrw-contents2 {
+		padding: 5rem 0rem;
+		@include tabletP {
+			margin: 0 auto;
+		}
+		.hrw-contents2-container {
+			@include tabletP {
+				display: flex;
+			}
+
+			.hrw-contents2-img-container {
+				@include tabletP {
+					flex: 1;
+					padding: 2rem;
+					// align-items: center;
+					justify-content: center;
+					@include flex-config(flex, column);
+
+					width: 500px;
+					height: 300px;
+				}
+				.hrw-contents2-img {
+					max-height: 100%;
+					max-width: 100%;
+				}
+			}
+			.reverse {
+				background: blue !important;
+				// display: flex;
+				// flex-direction: column-reverse;
+			}
+			.secondContentPadding {
+				@include tabletP {
+					* {
+						padding-left: 2rem;
+					}
+				}
+				@include laptop {
+					* {
+						// padding-left: 5rem;
+					}
+				}
+			}
+			.hrw-contents2-contents-container {
+				@include tabletP {
+					flex: 1 0 0;
+					justify-content: center;
+					@include flex-config(flex, column);
+				}
+				.hrw-contents2-title-subheader {
+					text-transform: uppercase;
+					font-size: 10px;
+				}
+				.hrw-contents2-title {
+					color: hsl(234, 12%, 34%);
+					font-weight: 600;
+					padding-bottom: 1rem;
+				}
+				.hrw-contents2-description {
+					line-height: 1rem;
+					font-weight: 300;
+					font-size: 0.7rem;
+					@include tabletP {
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// @include tabletP {
+
+// }

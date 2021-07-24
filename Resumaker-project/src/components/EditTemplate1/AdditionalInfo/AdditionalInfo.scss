@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.additional-info-button {
+  margin: 0 auto;
+  width: 98%;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 900;
+  background: none;
+  border: 2px solid #f19a34;
+  color: #f19a34;
+  cursor: pointer;
+  @include tabletP {
+    width: 20rem;
+  }
+}
+.additional-info-textarea {
+  border: none;
+  outline: 1px solid #f19a34;
+  margin: 1rem 0rem;
+  width: 98%;
+  height: 10rem;
+  padding: 0.5rem;
+  resize: none;
+  @include tabletP {
+    width: 20rem;
+  }
+}

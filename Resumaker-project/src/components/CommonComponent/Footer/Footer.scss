@@ -1,0 +1,65 @@
+@import "../../../Mixin.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+.footer {
+	margin-top: auto;
+	max-width: $maxWidth;
+	margin: 0 auto;
+	hr {
+		text-align: center;
+	}
+	.footer-contents {
+		margin: 0 1rem;
+		.footer-ul {
+			list-style: none;
+			@include flex-config(flex, row);
+			@include flex-position(space-evenly, center);
+			.footer-li {
+				flex: 1;
+				font-size: 10px;
+				padding: 0.5rem 0rem;
+				text-align: center;
+				&,
+				.footer-ul-li-a {
+					color: $theme;
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	.copyrights-container {
+		text-align: center;
+		.copyrights-text {
+			margin: 1rem;
+			color: #cccccc;
+			padding: 0rem;
+			font-size: 10px;
+			display: block;
+		}
+	}
+}
+@include tabletP {
+	.footer {
+		.footer-contents {
+			.footer-ul {
+				@include flex-position(flex-end, center);
+				.footer-li {
+					flex: none;
+					padding: 2rem 1rem 1rem 2rem;
+					font-size: 13px;
+				}
+			}
+		}
+		.copyrights-container {
+			.copyrights-text {
+				font-size: 15px;
+			}
+		}
+	}
+}

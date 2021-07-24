@@ -1,0 +1,58 @@
+@import "./TopBanner.scss";
+@import "./PopularTemplates.scss";
+
+$template-thumbnail-width-tabletP: 42.5%;
+$template-thumbnail-width-laptop: 28.5%;
+$number-of-templates-row-tabletP: 2;
+$number-of-templates-row-laptop: 3;
+$number-of-margins-tabletP: 4;
+$number-of-margins-laptop: 6;
+
+.mainpage-container {
+  color: $black;
+}
+
+.themeButton {
+  display: inline-block;
+  color: $white;
+  background-color: $themeBtn;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  padding: 0.4rem 1rem;
+  border: 1px $theme solid;
+  border-radius: 25px;
+  cursor: pointer;
+
+  @include mobileS {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.horizontal-divider {
+  height: 1px;
+  background-color: $themeBtn;
+}
+
+$calculated-margin-thumbnail-tabletP: calc(
+  (
+      #{$fullViewWidth} - #{$template-thumbnail-width-tabletP} * #{$number-of-templates-row-tabletP} -
+        2 * #{$containerPadding}
+    ) / #{$number-of-margins-tabletP}
+);
+$calculated-margin-thumbnail-laptop: calc(
+  (
+      #{$fullViewWidth} - #{$template-thumbnail-width-laptop} * #{$number-of-templates-row-laptop} -
+        2 * #{$containerPadding}
+    ) / #{$number-of-margins-laptop}
+);
+$calculated-margin-thumbnail-max-width-plus: calc(
+  (
+      #{$maxWidth} - #{$template-thumbnail-width-laptop} * #{$number-of-templates-row-laptop} -
+        2 * #{$containerPadding}
+    ) / #{$number-of-margins-laptop}
+);

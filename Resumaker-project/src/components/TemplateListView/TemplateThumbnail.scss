@@ -1,0 +1,44 @@
+.templateThumbnail-container {
+  margin: 1rem auto;
+  text-align: center;
+
+  .carousel .control-dots {
+    background-color: transparent;
+  }
+
+  @include tabletP {
+    margin: 1rem auto 2rem;
+    width: 42.5%;
+  }
+
+  @include laptop {
+    width: 28.5%;
+  }
+
+  .carousel.carousel-slider {
+    height: 360px;
+  }
+
+  .templateThumbnail-name {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.75rem;
+  }
+
+  .templateThumbnail-button {
+    width: 100%;
+  }
+
+  .templateThumbnail-button:hover {
+    transform: scale(1) !important;
+    opacity: 0.8;
+  }
+}
+
+.horizontal-divider {
+  margin: 1.5rem auto;
+
+  @include tabletP {
+    display: none;
+  }
+}

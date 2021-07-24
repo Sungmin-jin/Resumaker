@@ -1,0 +1,54 @@
+.topBanner-container {
+  background-color: $theme;
+  display: grid;
+  grid-template-rows: calc(50vh - 60px) 1fr;
+
+  @include tabletP {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc((100% - 2 * #{$containerPadding}) / 2);
+  }
+
+  @include laptopToDesktop {
+    height: calc((#{$maxWidth} - 2 * #{$containerPadding}) / 2);
+  }
+
+  .topBanner-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $theme;
+    height: 100%;
+
+    .topBanner-header {
+      font-weight: 900;
+      background-color: $theme;
+      text-align: center;
+      color: $white;
+      font-size: 1.2rem;
+      padding: 0 2rem 0.8rem;
+
+      @include mobileS {
+        font-size: 1.5rem;
+      }
+
+      @include tabletP {
+        font-size: 1.75rem;
+      }
+
+      @include laptop {
+        font-size: 2rem;
+        padding: 0 2rem 2rem;
+      }
+
+      @include desktop {
+        font-size: 2.5rem;
+        padding: 0 2rem 3rem;
+      }
+    }
+  }
+
+  // .topBanner-left {  }
+}

@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$border-plain: 1px solid $black;
+
+.auth-error-container {
+  .auth-alert {
+    padding: 0.8rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+    background-color: #3db36d;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.authentication {
+  max-height: 100%;
+  width: 100%;
+  padding: 5rem 0rem 0rem 0rem;
+  @include flex-position(center, center);
+  // Authentication-form (left div) start
+  .form-picture-container {
+    display: none;
+  }
+  .authentication-container {
+    flex-direction: row;
+    @include flex-position(center, center);
+    .authentication-title {
+      text-align: center;
+      margin-bottom: 10px;
+      padding: 20px 0px;
+    }
+    .form-container {
+      .authentication_input {
+        border: 2rem solid black;
+        margin: 0 auto;
+        @include mobileM {
+          width: 20rem;
+        }
+        padding: 7px;
+        border-radius: 8px;
+        border: $border-plain;
+        background-color: $white;
+        @include flex-config(flex, column);
+        .auth-email,
+        .auth-password,
+        .auth-confirm {
+          padding: 15px 0;
+          border: none;
+          min-width: 100%;
+          border-bottom: $border-plain;
+          &:focus {
+            outline: none;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      .authentication-input-misc {
+        display: flex;
+        .authentication-remember-me,
+        .authentication-auth-btn-wrapper {
+          width: 100%;
+          padding: 30px 10px;
+          display: flex;
+          @include flex-position(flex-start, center);
+        }
+        .authentication-remember-me {
+          .chk-box-label {
+            font-size: 13px;
+            padding: 0px 5px;
+          }
+          .chk-box {
+            border: 2px solid $black;
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .auth-btn {
+          background-color: #3db36d;
+          height: 40px;
+          width: 100%;
+          color: $white;
+          border: none;
+          border-radius: 20px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .hr-element {
+      @include flex-config(flex, row);
+      @include flex-position(center, center);
+      max-width: 100%;
+      padding: 1rem 0rem;
+      &::before,
+      &::after {
+        content: "";
+        flex: 1;
+        border: 0.5px solid $black;
+      }
+      &:not(:empty)::before {
+        margin-right: 10px;
+      }
+      &:not(:empty)::after {
+        margin-left: 10px;
+      }
+    }
+    .authentication-message {
+      font-size: 13px;
+      text-align: center;
+      padding: 10px 0px 3px 0px;
+      letter-spacing: 2px;
+      color: #c8c8c8;
+      @include flex-config(flex, column);
+      .msg-link {
+        letter-spacing: 0px;
+        color: #9eb0df;
+        &:hover {
+          text-decoration: underline;
+          cursor: default;
+        }
+      }
+    }
+    .authentication-third-party {
+      flex-direction: column;
+      @include flex-position(center, center);
+      .third-party-wrapper {
+        padding: 5px;
+        margin: 5px;
+        max-width: 100%;
+        background-color: $white;
+        @include flex-config(flex, row);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        &:hover {
+          cursor: pointer;
+        }
+        .logo-wrapper {
+          padding: 5px;
+          img {
+            max-width: 35px;
+            max-height: 35px;
+          }
+        }
+        .third-party-text {
+          max-width: 100%;
+          padding: 0px 15px;
+          @include flex-config(flex, row);
+          @include flex-position(left, center);
+        }
+      }
+    }
+  }
+  .form-picture-container {
+    .form-picture {
+      min-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@include tabletP {
+  .authentication {
+    margin: 0rem;
+    padding: 0rem;
+    @include flex-config(flex, row);
+    @include flex-position(center, stretch);
+    .authentication-container,
+    .form-picture-container {
+      flex: 1;
+      align-items: center;
+      @include flex-config(flex, column);
+    }
+    .authentication-container {
+      .form-container {
+        .authentication_input {
+          margin: 0 auto;
+          width: 20rem;
+        }
+      }
+    }
+    .hr-element {
+      min-width: 300px;
+    }
+    .form-picture-container {
+      .form-picture {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .third-party-wrapper {
+      min-width: 300px;
+    }
+  }
+}

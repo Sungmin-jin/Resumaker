@@ -1,0 +1,35 @@
+@import "../../../Mixin.scss";
+
+.developer-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 270px;
+  height: 420px;
+  padding: 0 0.75rem;
+  margin: 1rem auto;
+
+  @include tabletP {
+    margin: 1.5rem 1rem;
+  }
+
+  @include laptop {
+    margin: 1.5rem 1.25rem;
+  }
+
+  &:last-child {
+    display: none;
+    @include tabletP {
+      display: flex;
+      visibility: hidden;
+    }
+    background-color: blue;
+  }
+
+  .developer-info-card-image {
+    width: 250px;
+    height: 315px;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,72 @@
+@import "./MyTemplateThumbnail.scss";
+
+.dashboard-container {
+  .dashboard-greeting {
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+
+    @include mobileS {
+      font-size: 1rem;
+    }
+
+    .dashboard-greeting-user-email {
+      color: $theme;
+      font-weight: bold;
+    }
+  }
+
+  .dashboard-header {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+
+    @include mobileS {
+      font-size: 1.2rem;
+    }
+
+    @include tabletP {
+      margin-bottom: 0;
+    }
+  }
+
+  .dashboard-my-templates {
+    @include tabletP {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .myTemplateThumbnail-container:nth-last-child(2) {
+      @include tabletP {
+        margin-left: $calculated-margin-thumbnail-tabletP;
+        margin-right: $calculated-margin-thumbnail-tabletP;
+      }
+
+      @include laptop {
+        margin-left: $calculated-margin-thumbnail-laptop;
+        margin-right: $calculated-margin-thumbnail-laptop;
+      }
+
+      @include laptopToDesktop {
+        margin-left: $calculated-margin-thumbnail-max-width-plus;
+        margin-right: $calculated-margin-thumbnail-max-width-plus;
+      }
+    }
+
+    .myTemplateThumbnail-container:nth-last-child(3) {
+      @include laptop {
+        margin-left: $calculated-margin-thumbnail-laptop;
+        margin-right: $calculated-margin-thumbnail-laptop;
+      }
+
+      @include laptopToDesktop {
+        margin-left: $calculated-margin-thumbnail-max-width-plus;
+        margin-right: $calculated-margin-thumbnail-max-width-plus;
+      }
+    }
+    .myTemplateThumbnail-container:nth-last-child(2) {
+      .horizontal-divider {
+        display: none;
+      }
+    }
+  }
+}

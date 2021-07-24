@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.steps-container {
+  margin: 1rem 0rem;
+  @include flex-config(flex, column);
+  background-color: rgba(0, 0, 0, 0.01);
+  .steps-title {
+    color: #394086;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 48.76px;
+  }
+  .steps {
+    @include flex-config(flex, column);
+    .step-container {
+      text-align: center;
+      .step-information {
+        .step-h3-nth,
+        .step-p-nth {
+          padding: 5px;
+          color: #394086;
+        }
+        .step-h3-nth {
+          text-transform: uppercase;
+          color: $theme;
+          font-weight: 900;
+        }
+        .step-p-nth {
+          font-weight: 600;
+        }
+      }
+      .arrow-container {
+        margin: 0 auto;
+        &::after {
+          display: flex;
+          @include flex-position(center, center);
+          content: '\2193';
+          height: 100%;
+          color: $theme;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+// when screen larger than 768px
+@include tabletP {
+  .steps-container {
+    font-size: 40px;
+    margin: 3rem 0rem 6rem 0rem;
+    .steps-title {
+      padding: 30px;
+      font-size: 40px;
+    }
+    .steps {
+      margin: 2rem 0rem;
+      flex-direction: row;
+      @include flex-position(center, top);
+      .step-container {
+        @include flex-config(flex, row);
+        .step-information {
+          @include flex-config(flex, column);
+          margin: 0rem 1rem;
+          width: 75%;
+          .step-h3-nth,
+          .step-p-nth {
+            font-size: 20px;
+          }
+        }
+        .arrow-container {
+          display: flex;
+          align-items: center;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: '\2192';
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+@include laptop {
+  .steps-container {
+    .steps {
+      .step-container {
+        .step-information {
+          margin: 0rem 5rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

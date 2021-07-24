@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.autherror-toast-body {
+  @include flex-config(flex, row);
+  border-left: 4px solid red;
+  .autherror-message {
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+    color: $black;
+  }
+}
+.autherror-toast-container {
+  @include mobileS {
+    padding: 2rem;
+    position: fixed;
+    top: 5%;
+  }
+  @include tabletP {
+    padding: 0rem;
+    position: fixed;
+  }
+}

@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.project {
+  margin: 0 auto;
+  @include mobileXS {
+    width: 100%;
+  }
+  @include tabletP {
+    width: 20rem;
+  }
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .project-input-file {
+    display: none;
+  }
+
+  .project-form {
+    border: 2px solid #f19a34;
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+    .project-image-container {
+      width: 100%;
+      outline: 1px solid #f19a34;
+      position: relative;
+      .project-image {
+        padding: 0.1rem;
+        height: 40%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .image-add-button {
+        color: #f19a34;
+        font-size: 1.75rem;
+        margin: 1.5rem;
+        cursor: pointer;
+      }
+      .image-cancle-btn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #f19a34;
+        position: absolute;
+        font-size: 2.5rem;
+        cursor: pointer;
+      }
+      .project-input-btn {
+        font-size: 15px;
+        background: none;
+        padding: 1rem 0.5rem;
+        border: none;
+        outline: none;
+        min-width: 100%;
+        cursor: pointer;
+        @include flex-config(flex, column);
+        @include flex-position(center, center);
+        & span:first-child {
+          font-size: 30px;
+        }
+        & > span {
+          padding: 1rem 0rem;
+        }
+      }
+    }
+
+    .project-title-input,
+    .project-description-textarea {
+      resize: none;
+      padding: 0.3rem;
+      min-width: 70%;
+      border: 1px solid #f19a34;
+      &:focus {
+        outline: none;
+      }
+    }
+    .project-form-title,
+    .project-form-description {
+      padding: 0.5rem 0rem;
+    }
+    .project-description-textarea {
+      margin: 0 0 1rem 0;
+      height: 5rem;
+    }
+  }
+  .project-btn-container {
+    padding: 1rem 2rem;
+    display: flex;
+    .project-update,
+    .project-delete {
+      flex: 1;
+      border: none;
+      background: none;
+      margin: 0.2rem;
+      padding: 0rem 1rem;
+      outline: 1px solid #f19a34;
+      &:hover {
+        outline: 2px solid #f19a34;
+      }
+    }
+  }
+}
+.project-add-btn,
+.project-delete-btn {
+  color: #f19a34;
+  cursor: pointer;
+  font-size: 1.75rem;
+}

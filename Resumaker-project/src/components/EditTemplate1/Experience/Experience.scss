@@ -1,0 +1,79 @@
+.experience {
+  margin: 0 auto;
+  width: 20rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  @include mobileXS {
+    width: 100%;
+  }
+  @include tabletP {
+    width: 20rem;
+  }
+  .experience-form {
+    border: 2px solid #f19a34;
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+
+    .experience-form-label-checkbox {
+      padding: 0.5rem 0rem;
+      font-size: 1.17em;
+      font-weight: bold;
+    }
+
+    .experience-form-title {
+      padding: 0.5rem 0rem;
+    }
+
+    .experience-form-isCurrent-container {
+      padding: 1rem 0rem 0.25rem;
+      min-width: 70%;
+      @include flex-config(flex, row);
+      @include flex-position(flex-start, center);
+
+      .experience-form-label-checkbox {
+        padding-left: 2.5rem;
+      }
+    }
+
+    .experience-form-text-input,
+    .experience-form-textarea {
+      resize: none;
+      padding: 0.3rem;
+      min-width: 70%;
+      border: 1px solid #f19a34;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .experience-form-date-invalid {
+      color: red;
+      padding: 0.25rem 0 0;
+    }
+
+    .experience-form-checkbox {
+      width: 20px;
+      height: 20px;
+      color: #f19a34;
+      outline: 1px solid #f19a34;
+    }
+
+    .experience-form-textarea {
+      margin: 0 0 1rem 0;
+      height: 5rem;
+    }
+  }
+}
+
+.experience:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.experience-add-btn,
+.experience-delete-btn {
+  color: #f19a34;
+  cursor: pointer;
+  font-size: 1.75rem;
+}

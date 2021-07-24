@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.editTemplate1-contact {
+	margin: 0 auto;
+	width: 20rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	@include mobileXS {
+		width: 100%;
+	}
+	@include tabletP {
+		width: 20rem;
+	}
+	.editTemplate1-contact-form-container {
+		border: 2px solid #f19a34;
+		@include flex-config(flex, column);
+		@include flex-position(center, center);
+		.editTemplate1-contact-form {
+			position: relative;
+			width: 80%;
+			// border: 1px solid black;
+			.editTemplate1-contact-form-input {
+				position: absolute;
+				top: 1rem;
+				left: 2rem;
+				width: 1.5rem;
+				height: 1.5rem;
+				border: none;
+			}
+			.editTemplate1-contact-form-label {
+				display: inline-block;
+				vertical-align: center;
+				padding: 1rem;
+			}
+		}
+	}
+	.editTemplate1-form-input {
+		width: 80%;
+		border: none;
+		outline: 2px solid #f19a34;
+		padding: 0.3rem;
+		margin-bottom: 1rem;
+	}
+}

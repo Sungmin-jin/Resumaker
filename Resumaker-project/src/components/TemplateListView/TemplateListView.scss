@@ -1,0 +1,54 @@
+@import "./TemplateThumbnail.scss";
+
+.templateListView-container {
+  .templateListView-header {
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
+
+    @include tabletP {
+      font-size: 1.5rem;
+    }
+  }
+
+  .templateListView-section {
+    @include tabletP {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .templateThumbnail-container:nth-last-child(2) {
+      @include tabletP {
+      margin-left: $calculated-margin-thumbnail-tabletP;
+      margin-right: $calculated-margin-thumbnail-tabletP;
+      }
+
+      @include laptop {
+        margin-left: $calculated-margin-thumbnail-laptop;
+        margin-right: $calculated-margin-thumbnail-laptop;
+      }
+
+      @include laptopToDesktop {
+        margin-left: $calculated-margin-thumbnail-max-width-plus;
+        margin-right: $calculated-margin-thumbnail-max-width-plus;
+      }
+    }
+
+    .templateThumbnail-container:nth-last-child(3) {
+      @include laptop {
+        margin-left: $calculated-margin-thumbnail-laptop;
+        margin-right: $calculated-margin-thumbnail-laptop;
+      }
+
+      @include laptopToDesktop {
+        margin-left: $calculated-margin-thumbnail-max-width-plus;
+        margin-right: $calculated-margin-thumbnail-max-width-plus;
+      }
+    }
+
+    .templateThumbnail-container:nth-last-child(2) {
+      .horizontal-divider {
+        display: none;
+      }
+    }
+  }
+}

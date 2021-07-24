@@ -1,0 +1,74 @@
+// Mixin
+@import "./Mixin.scss";
+
+// font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+// Header
+@import "./components/CommonComponent/Header.scss";
+
+// MainPage
+@import "./src/components/MainPage/MainPage.scss";
+
+// Footer
+@import "./components/CommonComponent/Footer/Footer.scss";
+// Footer -> LatestNews
+@import "./components/CommonComponent/Footer/LatestNews.scss";
+// Footer -> HowResumakerworks.scss
+@import "./components/CommonComponent/Footer/HowResumakerWorks.scss";
+
+// Authentication.scss
+@import "./components/Authentication/Authentication.scss";
+// Authentication -> Autherror.scss
+@import "./components/Authentication/AuthError/AuthError.scss";
+
+// Steps.scss
+@import "./components/MainPage/Steps.scss";
+// Feature.scss
+@import "./components//MainPage/Feature.scss";
+// TemplateListView
+@import "./components/TemplateListView/TemplateListView.scss";
+// Dashboard
+@import "./components/Dashboard/Dashboard.scss";
+
+// EditTemplate1
+@import "./components/EditTemplate1/EditTemplate1.scss";
+// editTemplate1 -> about
+@import "./components/EditTemplate1/About/About.scss";
+// editTemplate1 -> project
+@import "./components/EditTemplate1/Project/Project.scss";
+// editTemplate1 -> Additional Info
+@import "./components/EditTemplate1/AdditionalInfo/AdditionalInfo.scss";
+// editTemplate1 -> experience
+@import "./components/EditTemplate1/Experience/Experience.scss";
+// editTemplate1 -> education
+@import "./components/EditTemplate1/Education/Education.scss";
+// editTemplate1 -> contact
+@import "./components/EditTemplate1/SocialMedia/SocialMedia.scss";
+// previewTemplate1
+@import "./components//PreviewTemplate1/PreviewTemplate1.scss";
+
+* {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: $maxWidth;
+	padding: 0 $containerPadding;
+	min-height: 100%;
+	margin: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

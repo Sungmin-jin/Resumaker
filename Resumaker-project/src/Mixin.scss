@@ -1,0 +1,87 @@
+$white: #fdfdfd;
+$black: #1b1c1d;
+$theme: #4955bc;
+$themeBtn: #293069;
+$maxWidth: 1280px;
+$containerPadding: 1.5rem;
+$fullViewWidth: 100vw;
+
+@mixin flex-config($flex, $flex-direction) {
+	display: $flex;
+	flex-direction: $flex-direction;
+}
+@mixin flex-position($j-c, $a-i) {
+	justify-content: $j-c;
+	align-items: $a-i;
+}
+@mixin mobileXS {
+	@media only screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobileS {
+	@media only screen and (min-width: 360px) {
+		@content;
+	}
+}
+
+@mixin mobileM {
+	@media only screen and (min-width: 375px) {
+		@content;
+	}
+}
+
+@mixin mobileL {
+	@media only screen and (min-width: 425px) {
+		@content;
+	}
+}
+
+@mixin mobileLtoTableP {
+	@media only screen and (min-width: 450px) {
+		@content;
+	}
+}
+
+@mixin tabletP {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin tablePtoLaptop {
+	@media only screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin laptopToDesktop {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin largeDesktop {
+	@media only screen and (min-width: 1920px) {
+		@content;
+	}
+}
+
+@mixin hugeDesktop {
+	@media only screen and (min-width: 2560px) {
+		@content;
+	}
+}

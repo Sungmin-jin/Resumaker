@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.editTemplate1 {
+  text-align: center;
+  // titles of the sections
+  .editTemplate1-title {
+    font-size: 1.5rem;
+    padding: 3rem 0rem;
+    color: #f19a34;
+    text-transform: uppercase;
+  }
+  // editTemplate1 header section
+  .editTemplate1-header {
+    border: 1px solid black;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.74);
+    padding: 2rem;
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+    .editTemplate1-textarea {
+      @include mobileXS {
+        width: 90%;
+      }
+      margin: 2rem;
+      resize: none;
+      padding: 0.5rem;
+      outline: none;
+      border: 1px solid #f19a34;
+    }
+    .editTemplate1-header-button {
+      color: $white;
+      border: 1px solid $white;
+      padding: 5px 40px;
+      background: none;
+      cursor: pointer;
+    }
+  }
+  // editTemplate1 navbar section
+  .editTemplate1-navbar {
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left !important;
+    background: #f19a34;
+  }
+  // editTemplate1-about-section
+  // editTemplate1-project-section
+  // editTemplate1-work-experience-section
+  // editTemplate1-education-section
+  // editTemplate1-additional button section
+  .editTemplate1-additional {
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+    margin: 2rem 0rem 0rem 0rem;
+  }
+  // editTemplate1-contact-section
+
+  // editTemplate1-preview button section
+  .editTemplate1-preview {
+    border: 3px solid #f19a34;
+    background: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    margin: 2rem 0rem 1rem 0rem;
+  }
+
+  .editTemplate1-preview-button:hover {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@include tabletP {
+  .editTemplate1 {
+    .editTemplate1-title {
+      font-size: 3rem;
+    }
+    // editTemplate1 header section
+    .editTemplate1-header {
+      padding: 3rem;
+      .editTemplate1-textarea {
+        min-width: 40rem;
+        min-height: 10rem;
+      }
+    }
+    // editTemplate1 navbar section
+    .editTemplate1-navbar {
+      padding: 1rem 3rem;
+    }
+
+    .editTemplate1-preview-btn {
+      &:hover {
+        opacity: 0.9;
+        transform: scale(1);
+      }
+    }
+    // editTemplate1-about-section
+    // editTemplate1-project-section
+    // editTemplate1-work-experience-section
+    // editTemplate1-education-section
+    // editTemplate1-additional button section
+    .editTemplate1-additional {
+    }
+    // editTemplate1-contact-section
+
+    // editTemplate1-preview button section
+    .editTemplate1-preview {
+      font-size: 1.5rem;
+    }
+  }
+}

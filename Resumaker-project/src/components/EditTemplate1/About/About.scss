@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.about {
+  margin: 0 auto;
+  text-align: center;
+  @include mobileXS {
+    width: 100%;
+  }
+  @include tabletP {
+    width: 20rem;
+  }
+  .about-input-file {
+    display: none;
+  }
+  .image-add-button {
+    color: #f19a34;
+    font-size: 1.75rem;
+    margin: 1.5rem;
+    cursor: pointer;
+  }
+  .about-form {
+    border: 2px solid #f19a34;
+    padding-bottom: 1rem;
+    @include flex-config(flex, column);
+    @include flex-position(center, center);
+    .about-image-container {
+      width: 100%;
+      outline: 1px solid #f19a34;
+      position: relative;
+      .about-image {
+        padding: 0.1rem;
+        height: 40%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .image-add-button {
+        color: #f19a34;
+        font-size: 1.75rem;
+        margin: 1.5rem;
+        cursor: pointer;
+      }
+      .image-cancle-btn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #f19a34;
+        position: absolute;
+        font-size: 2.5rem;
+        cursor: pointer;
+      }
+      .about-input-btn {
+        font-size: 15px;
+        background: none;
+        padding: 1rem 0.5rem;
+        border: none;
+        outline: none;
+        min-width: 100%;
+        border-bottom: 1px solid #f19a34 !important;
+        cursor: pointer;
+        @include flex-config(flex, column);
+        @include flex-position(center, center);
+        & span:first-child {
+          font-size: 30px;
+        }
+        & > span {
+          padding: 1rem 0rem;
+        }
+      }
+    }
+
+    .about-title-input,
+    .about-description-textarea {
+      resize: none;
+      padding: 0.3rem;
+      min-width: 70%;
+      border: 1px solid #f19a34;
+    }
+    .about-form-title,
+    .about-form-description {
+      padding: 0.5rem 0rem;
+    }
+    .about-description-textarea {
+      margin: 0 0 1rem 0;
+    }
+  }
+}

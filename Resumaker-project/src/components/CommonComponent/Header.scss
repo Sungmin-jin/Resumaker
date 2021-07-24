@@ -1,0 +1,94 @@
+.header-container {
+  margin-top: 1rem;
+  max-width: $maxWidth;
+  padding: 0 1.5rem;
+  margin: auto;
+
+  .header-nav {
+    @include tabletP {
+      height: 70px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    color: $theme;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    .header-nav-logo-a {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .header-nav-logo-a:hover,
+    :active,
+    :visited {
+      color: $theme;
+    }
+
+    .header-nav-logo-span {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .header-nav-drop-down-toggle {
+      z-index: 3;
+      text-align: end;
+      position: absolute;
+      top: 12px;
+      right: 0;
+      padding: 0 0.6rem;
+      border: 1px #ccc solid;
+      border-radius: 15px;
+      background-color: $white;
+
+      .header-nav-drop-down-toggle-icon {
+        color: #aaa;
+        padding: 0.35rem;
+      }
+
+      @include tabletP {
+        display: none;
+      }
+    }
+
+    .header-nav-tablet {
+      display: none;
+
+      @include tabletP {
+        display: block;
+      }
+    }
+
+    .header-nav-ul {
+      @include tabletP {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .header-nav-li {
+      padding: 0.5rem 0.2rem;
+      font-size: 0.9rem;
+
+      @include tabletP {
+        flex-direction: row;
+        padding: 1rem 1.5rem;
+      }
+    }
+
+    .header-nav-menu-a {
+      color: $theme;
+      border-bottom: 3px transparent solid;
+      padding-bottom: 0.5rem;
+
+      &:hover {
+        @include tabletP {
+          border-bottom: 2px $theme solid;
+        }
+      }
+    }
+  }
+}
